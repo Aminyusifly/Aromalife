@@ -25,7 +25,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link to="/catalog" onClick={() => setMenuOpen(false)}>
-                Katalog
+                Kataloq
               </Link>
             </li>
           </ul>
