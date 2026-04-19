@@ -186,7 +186,7 @@ export default function Home() {
           variants={fadeUp}
         >
           <div className="home-section-left">
-            <span className="home-section-tag">Perakende satış</span>
+            <span className="home-section-tag">Pərakəndə satış</span>
             <h2 className="home-section-title">Məhsullarımız</h2>
           </div>
           <Link to="/catalog" className="home-see-all">
@@ -311,7 +311,7 @@ export default function Home() {
         <div className="footer-inner">
           <div className="footer-brand">
             <div className="footer-logo-text">AROMA LIFE</div>
-            <p className="footer-tagline">Perakende və topdan ətir satışı</p>
+            <p className="footer-tagline">Pərakəndə və topdan ətir satışı</p>
 
             <a
               href="https://maps.google.com/?q=Sədərək+ticarət+mərkəzi"
@@ -329,7 +329,7 @@ export default function Home() {
               Ana səhifə
             </Link>
             <Link to="/catalog" className="footer-link">
-              Katalog
+              Kataloq
             </Link>
           </div>
           <div className="footer-col">

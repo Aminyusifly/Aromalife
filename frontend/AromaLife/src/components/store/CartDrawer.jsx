@@ -51,16 +51,10 @@ export default function CartDrawer({ isOpen, onClose }) {
   };
 
   const handleWhatsAppOrder = async () => {
-    if (!form.customerName || !form.customerPhone) {
-      setError("Ad və telefon daxil edin!");
-      return;
-    }
+    if (!form.customerName || !form.customerPhone) return;
     setLoading(true);
     setError("");
-    console.log("1. Başladı");
-    console.log("2. Cart items:", cartItems);
     try {
-      console.log("3. API çağırılır...");
       const res = await createWhatsAppOrder({
         customerName: form.customerName,
         customerPhone: form.customerPhone,
@@ -86,7 +80,7 @@ export default function CartDrawer({ isOpen, onClose }) {
         ``,
         `💰 Cəmi: ${order.totalAmount.toFixed(2)} AZN`,
         ``,
-        `Zəhmət olmasa təsdiq edin.`,
+        z`Zəhmət olmasa təsdiq edin.`,
       ];
 
       const message = encodeURIComponent(lines.join("\n"));
