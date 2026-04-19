@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap");
+:root {
+  --color-gold: #c9a84c;
+  --color-gold-light: #e8d5a3;
+  --color-gold-dark: #9e7d2f;
+
+  --color-bg: #f5f2eb;
+  --color-bg-secondary: #ede9df;
+  --color-bg-white: #faf8f3;
+
+  --color-text-primary: #1c1a17;
+  --color-text-secondary: #5c5a55;
+  --color-text-muted: #9c9a95;
+
+  --color-border: #e0dbcf;
+  --color-border-dark: #c8c4b4;
+  --color-success: #3b6d11;
+  --color-success-bg: #eaf3de;
+  --color-error: #a32d2d;
+  --color-error-bg: #fcebeb;
+  --color-warning: #854f0b;
+  --color-warning-bg: #faeeda;
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  --transition: all 0.2s ease;
+
+  --container-width: 1280px;
+  --container-padding: 0 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+}

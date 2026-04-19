@@ -1,0 +1,139 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-bg-white);
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+}
+
+.navbar-container {
+  width: 100%;
+  padding: 0 32px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-logo img {
+  width: 120px !important;
+  height: 60px !important;
+  max-width: unset !important;
+  mix-blend-mode: multiply;
+}
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.navbar-links a:hover {
+  color: var(--color-gold);
+}
+
+.navbar-cart {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  padding: 8px;
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-cart:hover {
+  color: var(--color-gold);
+}
+
+.navbar-cart-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: var(--color-gold);
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  padding: 8px;
+  cursor: pointer;
+}
+
+.navbar-mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .navbar-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-links {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--color-bg-white);
+    flex-direction: column;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--color-border);
+    z-index: 100;
+    gap: 0;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    list-style: none;
+  }
+
+  .navbar-links a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 15px;
+    color: var(--color-text-primary);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .navbar-links a:hover {
+    color: var(--color-gold);
+    background: var(--color-bg-secondary);
+  }
+}

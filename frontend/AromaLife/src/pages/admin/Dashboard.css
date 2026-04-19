@@ -1,0 +1,357 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.dashboard-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: var(--color-text-muted);
+}
+
+/* Stat cards */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stat-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-card-icon.gold {
+  background: #fdf6e7;
+  color: var(--color-gold);
+}
+
+.stat-card-icon.blue {
+  background: #e6f1fb;
+  color: #185fa5;
+}
+
+.stat-card-icon.green {
+  background: #eaf3de;
+  color: #3b6d11;
+}
+
+.stat-card-icon.purple {
+  background: #eeedfe;
+  color: #534ab7;
+}
+
+.stat-card-label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.stat-card-value {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  font-family: var(--font-heading);
+}
+
+/* Alert */
+.dashboard-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+}
+
+/* Card */
+.dashboard-card {
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.dashboard-card-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.dashboard-empty {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 32px 0;
+}
+
+/* Chart */
+.dashboard-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 180px;
+}
+
+.chart-bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+}
+
+.chart-bar-value {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.chart-bar-track {
+  flex: 1;
+  width: 100%;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.chart-bar {
+  width: 100%;
+  background: var(--color-gold);
+  border-radius: var(--radius-sm);
+  transition: height 0.4s ease;
+  min-height: 4px;
+}
+
+.chart-bar-label {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* Table */
+.dashboard-table-wrap {
+  overflow-x: auto;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.dashboard-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-border);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.dashboard-table td {
+  padding: 12px 12px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  vertical-align: middle;
+}
+
+.dashboard-table tr:last-child td {
+  border-bottom: none;
+}
+
+.dashboard-table tr:hover td {
+  background: var(--color-bg-secondary);
+}
+
+.dashboard-table-id {
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.dashboard-table-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* Pills */
+.status-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.status-new {
+  background: #e6f1fb;
+  color: #185fa5;
+}
+.status-prep {
+  background: #faeeda;
+  color: #854f0b;
+}
+.status-done {
+  background: #eaf3de;
+  color: #3b6d11;
+}
+.status-cancel {
+  background: #fcebeb;
+  color: #a32d2d;
+}
+
+.source-pill {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.source-form {
+  background: #eeedfe;
+  color: #534ab7;
+}
+.source-wp {
+  background: #eaf3de;
+  color: #3b6d11;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+}
+.dashboard-charts-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+.dashboard-card.flex-1 {
+  flex: 1;
+}
+.dashboard-card.flex-2 {
+  flex: 2;
+}
+
+.dashboard-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: #c9a84c;
+}
+
+.dashboard-card-header .dashboard-card-title {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.top-products {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.top-product-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--color-bg-secondary);
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+}
+
+.top-product-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-product-rank {
+  width: 22px;
+  height: 22px;
+  background: #1c1a17;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.top-product-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.top-product-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.top-product-qty {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.top-product-revenue {
+  font-size: 12px;
+  font-weight: 500;
+  color: #c9a84c;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-charts-row {
+    grid-template-columns: 1fr;
+  }
+}

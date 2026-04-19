@@ -1,0 +1,6 @@
+@AromaAPI_HostAddress = http://localhost:5270
+
+GET {{AromaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

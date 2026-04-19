@@ -1,0 +1,118 @@
+.filter-panel {
+  width: 200px;
+}
+
+.filter-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.filter-panel-header h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.filter-reset {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: var(--color-error);
+  padding: 0;
+  transition: var(--transition);
+}
+
+.filter-reset:hover {
+  opacity: 0.7;
+}
+
+.filter-section {
+  border-top: 1px solid var(--color-border);
+  padding: 14px 0;
+}
+
+.filter-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  padding: 0;
+  margin-bottom: 12px;
+  transition: var(--transition);
+}
+
+.filter-section-title:hover {
+  color: var(--color-gold);
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  transition: var(--transition);
+}
+
+.filter-option:hover {
+  color: var(--color-text-primary);
+}
+
+.filter-option input[type="radio"],
+.filter-option input[type="checkbox"] {
+  accent-color: var(--color-gold);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.filter-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-price input {
+  flex: 1;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 8px 10px;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  background: var(--color-bg-white);
+  outline: none;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.filter-price input:focus {
+  border-color: var(--color-gold);
+}
+
+.filter-price span {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .filter-panel {
+    width: 100%;
+  }
+}
